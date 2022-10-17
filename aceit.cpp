@@ -67,7 +67,7 @@ int main()
 	return 0;
 }
 
-//Մուտքագրել տող, տպել տողը էկրանին հակառակ կարգով։
+//Մուտքագրել տող, տպել տողը էկրանին հակառակ կարգով։ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #include <iostream>
 
 void reverseStr(std::string& str)
@@ -347,6 +347,61 @@ int main()
     std::cout << str;
     return 0;
 }
+
+//Մուտքագրել տող։ Տողի բոլոր սիմվոլները դարձնել մեծատառ։ Արդյունքը տպել էկրանին։!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+#include <iostream>
+ void CAPS(std::string& str) {
+     int length = str.length();
+     for (int i = 0; i < length; i++) {
+         if (str[i] >= 'a' && str[i] <= 'z') { 
+            str[i] = str[i] - 32;
+         }
+        else if (str[i] >= 'A' && str[i] <= 'Z') {
+            str[i] = str[i];
+        }
+        else if (str[i] == ' ') {
+            str[i] = str[i];
+        }
+     }
+ }
+ 
+ int main() {
+    std::cout << "Enter a sentence: " << std::endl;
+    std::string str;
+    std::cin >> str;
+    std::cout << "Here it is all in CAPS: " << std::endl;
+    CAPS(str);
+    std::cout << str;
+    return 0;
+    
+ }
+
+
+//Մուտքագրել տող։ Տողի ամեն երկրորդ սիմվոլը դարձնել մեծատառ։ Արդյունքը տպել էկրանին։
+#include <iostream>
+
+void Ondnoklassniki_onvert(std::string& str)
+{
+    int ln = str.length();
+ 
+    for (int i = 1; i < ln; i+=2) {
+        str[i] -= 32;
+    }
+}
+ 
+int main()
+{
+    std::string str;
+    std::cout << "Enter a word; " << std::endl;
+    std::cin >> str;
+    Ondnoklassniki_onvert(str);
+ 
+    std::cout << str;
+    return 0;
+}
+
 
 
 
