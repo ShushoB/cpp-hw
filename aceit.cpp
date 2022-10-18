@@ -405,6 +405,48 @@ int main()
 
 
 
+//Մուտքագրել թիվ, որը ներկայացնում է հեռավորությունը՝ չափված մետրերով։ Վերածել եւ տպել արժեքը կիլոմետրերով։ Օրինակ՝ մուտքագրված 1400 թվի դեպքում տպել “1.4 km”։
+
+#include <iostream>
+
+int main() {
+    float meter, km;
+    std::cout << "Enter the distance in meters: " << std::endl;
+    std::cin >> meter;
+    km = meter / 1000;
+    std::cout << "The distance in km is: " << km << std::endl;
+}
+
+//Մուտքագրել թիվ, տպել թվի թվանշանների առավելագույն եւ նվազագույն արժեքները։
+
+#include<iostream>
+
+void Digits(int n)
+{
+    int largest = 0;
+    int smallest = 9;
+ 
+    while (n) {
+        int r = n % 10;
+        largest = std::max(r, largest);
+ 
+        smallest = std::min(r, smallest);
+ 
+        n = n / 10;
+    }
+    std::cout << largest << " " << smallest;
+}
+ 
+int main()
+{
+    std::cout << "Enter a number: ";
+    int n;
+    std::cin >> n;
+    Digits(n);
+ 
+    return 0;
+}
+
 
 
 
